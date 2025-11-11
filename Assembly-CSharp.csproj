@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/StopRotating.cs" />
-    <Compile Include="Assets/Scripts/Debug.cs" />
+    <Compile Include="Assets/Scripts/DebugExamples.cs" />
     <Compile Include="Assets/Scripts/Falling.cs" />
     <Compile Include="Assets/Scripts/Rotate.cs" />
   </ItemGroup>
