@@ -23,12 +23,15 @@ public class Rotate: MonoBehaviour
     void Update()
     {
         transformDelObjeto.Rotate(Vector3.up * speed);
+        if (speed < 1)
+            transformDelObjeto.Translate(Vector3.forward * 0.01F);
         
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(transformDelObjeto.name + " colisionó con " + collision.gameObject.name);
-        speed = 0;
+        speed = 0.5F;
+       
     }
 }
