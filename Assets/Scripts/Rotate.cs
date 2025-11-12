@@ -5,7 +5,6 @@ using UnityEngine;
 public class Rotate: MonoBehaviour
 {   
     [SerializeField] float speed;
-
     [SerializeField] Transform transformDelObjeto;
 
     void Awake()
@@ -16,22 +15,26 @@ public class Rotate: MonoBehaviour
     void Start()
     {
         Debug.Log("Debug START");
-        Debug.Log("Start " + transformDelObjeto.name + " " +  transformDelObjeto.rotation);
+        Debug.Log("Start " + transformDelObjeto.name + " " + transformDelObjeto.rotation);
+        speed = 3.0F;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transformDelObjeto.Rotate(Vector3.up * speed);
-        if (speed < 1)
+        transformDelObjeto.Rotate(Vector3.up * speed * (Time.deltaTime * 1000));
+       
+        if ((speed * Time.deltaTime) < 1)
             transformDelObjeto.Translate(Vector3.forward * 0.01F);
+       
+           
         
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(transformDelObjeto.name + " colisionó con " + collision.gameObject.name);
-        speed = 0.5F;
+        speed = 0;
        
     }
 }
