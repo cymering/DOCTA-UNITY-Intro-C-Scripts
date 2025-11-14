@@ -346,8 +346,6 @@
 "Assets/Scripts/DebugExamples.cs"
 "Assets/Scripts/Falling.cs"
 "Assets/Scripts/Rotate.cs"
-"Assets/Scripts/StopRotating.cs"
-"Assets/Scripts/Timers.cs"
 -langversion:9.0
 /deterministic
 /optimize+

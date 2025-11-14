@@ -16,7 +16,7 @@ public class Rotate: MonoBehaviour
     {
         Debug.Log("Debug START");
         Debug.Log("Start " + transformDelObjeto.name + " " + transformDelObjeto.rotation);
-        speed = 3.0F;
+        speed = Random.Range(1, 5);
     }
 
     // Update is called once per frame
@@ -33,7 +33,8 @@ public class Rotate: MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(transformDelObjeto.name + " colisionó con " + collision.gameObject.name);
+        
+        Debug.Log(transformDelObjeto.name + " colisionó con " + collision.gameObject.name + " at " + Time.time);
         speed = 0;
        
     }

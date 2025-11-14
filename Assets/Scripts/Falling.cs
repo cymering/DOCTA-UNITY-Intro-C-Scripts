@@ -20,7 +20,7 @@ public class Falling : MonoBehaviour
     void Update()
     {
         
-       transformDelObjeto.Translate(Vector3.down * speed1);
+       transformDelObjeto.Translate(Vector3.down * speed1 * Time.deltaTime);
 
     }
 }
